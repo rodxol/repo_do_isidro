@@ -30,7 +30,10 @@ function enviarDados(){
 // passo 4 - tratar o resultado
 function trataResposta(resp){
     if (resp.status == 200){
-
+        resp.json().then(user => {
+            localStorage.setItem("userDASH", JSON.stringify(user));
+            window.location = "relatorios.html";
+        });
     }
     else if (resp.status == 404){
         document.getElementById("msg").innerHTML = "Usuário não encontrado";
