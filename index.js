@@ -29,5 +29,16 @@ function enviarDados(){
 
 // passo 4 - tratar o resultado
 function trataResposta(resp){
-    console.log(resp);
+    if (resp.status == 200){
+
+    }
+    else if (resp.status == 404){
+        document.getElementById("msg").innerHTML = "Usuário não encontrado";
+    }
+    else if (resp.status == 403){
+        document.getElementById("msg").innerHTML = "Senha inválida";
+    }
+    else{
+        document.getElementById("msg").innerHTML = "Erro Desconhecido";
+    }
 }
