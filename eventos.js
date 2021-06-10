@@ -7,7 +7,7 @@ function verificaUsuario(){
 
 function logout(){
     localStorage.removeItem("userDASH");
-    window.location = "index.html";
+    window.location = "index.html"
 }
 
 
