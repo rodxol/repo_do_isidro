@@ -1,3 +1,16 @@
+function verificaUsuario(){
+    var strUser = localStorage.getItem("userDASH");
+    if (!strUser){
+        window.location = "index.html";
+    }
+}
+
+function logout(){
+    localStorage.removeItem("userDASH");
+    window.location = "index.html";
+}
+
+
 function gerarRelatorio(){
     var txtIni = document.getElementById("txtDataIni").value;
     var txtFim = document.getElementById("txtDataFim").value;

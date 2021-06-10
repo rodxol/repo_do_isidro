@@ -8,7 +8,7 @@
     <script type="text/javascript" src="eventos.js"></script>
     <title>.: Relatorio de Eventos por Periodo</title>
 </head>
-<body>
+<body onload="verificaUsuario()">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -26,8 +26,11 @@
             </div>            
         </div>
         <div class="row mt-3">
-            <div class="col-12">
+            <div class="col-6">
                 <button type="button" class="btn btn-primary" onclick="gerarRelatorio()">Gerar Relatório</button>
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn btn-primary" onclick="logout()">Logout</button>
             </div>
         </div>
         <div class="row">
@@ -37,7 +40,7 @@
         </div>
 
         <div id="tabelaRelatorio" >
-            ** aqui vai a tabela!!! ***
+           
         </div>
     </div>
 
